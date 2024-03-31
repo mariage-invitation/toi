@@ -1074,7 +1074,10 @@ legend.t-input-title {
     }
 }
 
-
+.t-form__inputsbox_flex .t-form__submit,
+.t-form__inputsbox_flex .tn-form__submit {
+    width: 100%
+}
 
 .t-form .t-submit {
     position: relative
