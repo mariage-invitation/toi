@@ -25,27 +25,69 @@
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient( 120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .8), rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    animation: shimmer 5s infinite linear;
+    /* Change duration to 5s */
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100px
+    }
+    20% {
+        left: 100%
+    }
+    100% {
+        left: 100%
+    }
+}
+
 
 /* Modal Content */
+
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
 }
 
+
 /* Close button */
+
 .close {
     color: #aaa;
     float: right;
@@ -60,19 +102,21 @@
     cursor: pointer;
 }
 
-
 .form-container {
     max-width: 400px;
     margin: 0 auto;
     border-radius: 16px;
-    background-color: transparent; /* Transparent background */
-  }
-  .form-container label {
+    background-color: transparent;
+    /* Transparent background */
+}
+
+.form-container label {
     display: block;
     margin-bottom: 5px;
     font-size: 14px
-  }
-  .form-container input[type="text"] {
+}
+
+.form-container input[type="text"] {
     width: 280px;
     padding: 8px;
     margin-bottom: 15px;
@@ -82,21 +126,27 @@
     border: 2px solid #c4c4c4;
     border-radius: 12px;
     padding-left: 10px;
-  }
-  .form-container input[type="radio"] {
+}
+
+.form-container input[type="radio"] {
     margin-right: 5px;
-    vertical-align: middle; /* Aligning radio buttons vertically */
+    vertical-align: middle;
+    /* Aligning radio buttons vertically */
     background: transparent
-  }
-  .form-container .radio-label {
+}
+
+.form-container .radio-label {
     display: inline-block;
     vertical-align: middle;
     margin-right: 15px;
-  }
-  .form-container .radio-group {
-    margin-bottom: 5px; /* Add margin between radio groups */
-  }
-  .form-container input[type="submit"] {
+}
+
+.form-container .radio-group {
+    margin-bottom: 5px;
+    /* Add margin between radio groups */
+}
+
+.form-container input[type="submit"] {
     background-color: #364557;
     color: white;
     padding: 10px 20px;
@@ -104,13 +154,13 @@
     border-radius: 100px;
     cursor: pointer;
     width: 240px;
-    margin:0 auto;
+    margin: 0 auto;
     display: block;
-  }
-  .form-container input[type="submit"]:hover {
-    background-color: #45a049;
-  }
+}
 
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
 
 #allrecords a:focus-visible,
 #allrecords button:focus-visible,
@@ -275,7 +325,7 @@ img:not([src]) {
     background-color: #000;
     color: #fff;
     width: 100%;
-    height: 70px;
+    height: 20px;
     font-family: Arial;
     font-size: 14px
 }
@@ -289,14 +339,13 @@ img:not([src]) {
     height: 30px;
     width: 270px;
     margin: 0 auto;
-    padding-top: 20px;
-    opacity: .4
+    opacity: .5
 }
 
 .t-tildalabel__txtleft {
     display: table-cell;
     width: 120px;
-    height: 30px;
+    height: 10px;
     vertical-align: middle;
     text-align: right;
     padding-right: 12px;
@@ -307,7 +356,7 @@ img:not([src]) {
 .t-tildalabel__wrapimg {
     display: table-cell;
     width: 30px;
-    height: 30px;
+    height: 5px;
     vertical-align: middle
 }
 
@@ -503,7 +552,6 @@ img:not([src]) {
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden
 }
 
 .t396__artboard .t396__artboard_scale {
