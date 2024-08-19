@@ -1430,7 +1430,8 @@
                         data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="intoview" data-animate-sbs-trg="1"
                         data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':'1000','mx':'0','my':'0','sx':1,'sy':1,'op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':2000,'mx':'0','my':'0','sx':1,'sy':1,'op':1,'ro':'0','bl':'0','ea':'','dt':'0'}]"
                         data-field-top-res-320-value="410" data-field-left-res-320-value="84" data-field-width-res-320-value="144" data-animate-sbs-opts-res-320="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':1,'sy':1,'op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':2000,'mx':'0','my':'0','sx':1,'sy':1,'op':1,'ro':'0','bl':'0','ea':'','dt':'0'}]">
-                        <div class='tn-atom' field='tn_text_1686688079821'>15.09.2024</div>
+                        <div class='tn-atom' field='tn_text_1686055803978' style='margin-top: 5px; font-size: 12px;'>(сағат 14:00)</div>
+                        <div class='tn-atom' field='tn_text_1686688079821' style='display: inline-block; margin-right: 10px;'>15.09.2024</div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__6137300221686693715553' data-elem-id='1686693715553' data-elem-type='text' data-field-top-value="260" data-field-left-value="816" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left"
                         data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-top-res-320-value="456" data-field-left-res-320-value="52"
@@ -1495,122 +1496,69 @@
                         <!--!ANNEXX!-->
                         <!--!ANX815-1!--!><!--![{"id":"","data":""},{"id":"anxcommentblock","data":""},{"id":"date-time","data":"2024-09-15"},{"id":"tz","data":"minus6"},{"id":"days","data":".tn-elem__6040154501686693715553"},{"id":"nullhour","data":"true"},{"id":"hours","data":".tn-elem__6040154501686693724824"},{"id":"minutes","data":".tn-elem__6040154501686693726477"},{"id":"seconds","data":".tn-elem__6040154501686693728091"},{"id":"adddaystohours","data":"true"},{"id":"days_text","data":".tn-elem__6040154501686693731372"},{"id":"days_1","data":"күн"},{"id":"days_2","data":"күн"},{"id":"days_5","data":"күн"},{"id":"hours_text","data":".tn-elem__6040154501686693738569"},{"id":"hours_1","data":"сағат"},{"id":"hours_2","data":"сағат"},{"id":"hours_5","data":"сағат"},{"id":"minutes_text","data":".tn-elem__6040154501686693743940"},{"id":"minutes_1","data":"минут"},{"id":"minutes_2","data":"минут"},{"id":"minutes_5","data":"минут"},{"id":"seconds_text","data":".tn-elem__6040154501686693748934"},{"id":"seconds_1","data":"секунд"},{"id":"seconds_2","data":"секунд"},{"id":"seconds_5","data":"секунд"}]!-->
                         <script>
-                            $('head').append('<style>' + (function() {
-                                return ".tn-elem__6137300221686693715553 , .tn-elem__6137300221686693724824 , .tn-elem__6137300221686693726477 , .tn-elem__6137300221686693728091 , .tn-elem__6137300221686693731372 , .tn-elem__6137300221686693738569 , .tn-elem__6137300221686693743940 , tn-elem__6137300221686693748934,  .tn-elem__6040154501686693748934".replace(/\s/g, "").split(/,\s|,/g).filter(function(e) {
-                                    return e
-                                }).join(",");
-                            }()) + '</style>');
-                            $(function() {
+                            $(document).ready(function() {
+                                // Append custom CSS to ensure correct element styles
+                                $('head').append('<style>' + (function() {
+                                    return ".tn-elem__6137300221686693715553, .tn-elem__6137300221686693724824, .tn-elem__6137300221686693726477, .tn-elem__6137300221686693728091, .tn-elem__6137300221686693731372, .tn-elem__6137300221686693738569, .tn-elem__6137300221686693743940, .tn-elem__6137300221686693748934".replace(/\s/g, "").split(/,\s|,/g).filter(function(e) {
+                                        return e;
+                                    }).join(",");
+                                }()) + '</style>');
+                        
                                 setTimeout(function() {
                                     let $days = $('.tn-elem__6137300221686693715553').length ? $('.tn-elem__6137300221686693715553').find('.tn-atom') : false,
                                         $daysText = $('.tn-elem__6137300221686693731372').length ? $('.tn-elem__6137300221686693731372').find('.tn-atom') : false,
-                                        daysText1 = 'күн' ? 'күн' : 'день',
-                                        daysText2 = 'күн' ? 'күн' : 'дня',
-                                        daysText5 = 'күн' ? 'күн' : 'дней',
+                                        daysText1 = 'күн', daysText2 = 'күн', daysText5 = 'күн',
                                         $hours = $('.tn-elem__6137300221686693724824').length ? $('.tn-elem__6137300221686693724824').find('.tn-atom') : false,
                                         $hoursText = $('.tn-elem__6137300221686693738569').length ? $('.tn-elem__6137300221686693738569').find('.tn-atom') : false,
-                                        hoursText1 = 'сағат' ? 'сағат' : 'час',
-                                        hoursText2 = 'сағат' ? 'сағат' : 'часа',
-                                        hoursText5 = 'сағат' ? 'сағат' : 'часов',
+                                        hoursText1 = 'сағат', hoursText2 = 'сағат', hoursText5 = 'сағат',
                                         $minutes = $('.tn-elem__6137300221686693726477').length ? $('.tn-elem__6137300221686693726477').find('.tn-atom') : false,
                                         $minutesText = $('.tn-elem__6137300221686693743940').length ? $('.tn-elem__6137300221686693743940').find('.tn-atom') : false,
-                                        minutesText1 = 'минут' ? 'минут' : 'минута',
-                                        minutesText2 = 'минут' ? 'минут' : 'минуты',
-                                        minutesText5 = 'минут' ? 'минут' : 'минут',
+                                        minutesText1 = 'минут', minutesText2 = 'минут', minutesText5 = 'минут',
                                         $seconds = $('.tn-elem__6137300221686693728091').length ? $('.tn-elem__6137300221686693728091').find('.tn-atom') : false,
                                         $secondsText = $('.tn-elem__6137300221686693748934').length ? $('.tn-elem__6137300221686693748934').find('.tn-atom') : false,
-                                        secondsText1 = 'секунд' ? 'секунд' : 'секунда',
-                                        secondsText2 = 'секунд' ? 'секунд' : 'секунды',
-                                        secondsText5 = 'секунд' ? 'секунд' : 'секунд',
-                                        date = new Date(('2024-09-15').replace(/-/g, "/")),
-                                        tz = (function() {
-                                            let tz = "minus6";
-                                            if (/plus/.test(tz)) {
-                                                return +tz.replace('plus', '+');
-                                            } else return +tz.replace('minus', '-');
-                                        }()),
-                                        tzScript = (date.getTimezoneOffset() / 60) - tz,
-                                        diffTZ = tzScript <= 0 ? true : false,
-                                        offsetTZUser = diffTZ ? 0 - tzScript : 0 + tzScript,
-                                        rend = false;
-
+                                        secondsText1 = 'секунд', secondsText2 = 'секунд', secondsText5 = 'секунд',
+                                        targetDate = new Date('2024-09-15T14:00:00+05:00'); // Target date and time in UTC+5
+                        
                                     function declOfNum(number, words) {
                                         return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? Math.abs(number) % 10 : 5]];
                                     }
-
-                                    function nullTime() {
-                                        return diffTZ ? (Date.parse(date) - (Date.now() - offsetTZUser * 60 * 60 * 1000)) / 1000 > 0 : (Date.parse(date) - (Date.now() + offsetTZUser * 60 * 60 * 1000)) / 1000 > 0
-                                    }
-                                    if (nullTime()) {
-                                        setInterval(timer, 1e3);
-                                        timer();
-
-                                        function timer() {
-                                            let timeLeft = diffTZ ? parseInt((Date.parse(date) - (Date.now() - offsetTZUser * 60 * 60 * 1000)) / 1000) : parseInt((Date.parse(date) - (Date.now() + offsetTZUser * 60 * 60 * 1000)) / 1000),
-                                                days = Math.floor(timeLeft / 86400),
-                                                hours = Math.floor((timeLeft - ($days ? (days * 86400) : !$days && !true ? (days * 86400) : 0)) / 3600),
-                                                minutes = Math.floor(((timeLeft - ($days ? (days * 86400) : !$days && !true ? (days * 86400) : 0) - ($hours ? hours * 3600 : !$days && !true ? hours * 3600 : 0)) / 60)),
-                                                seconds = Math.floor((timeLeft - ($days ? (days * 86400) : !$days && !true ? (days * 86400) : 0) - ($hours ? hours * 3600 : !$days && !true ? hours * 3600 : 0) - ($minutes ? minutes * 60 : !$days && !true ? minutes * 60 : 0)));
-                                            let hoursB = hours,
-                                                minutesB = minutes,
-                                                secondsB = seconds;
-                                            if (true && days < "10") {
-                                                days = "0" + days;
-                                            }
-                                            if (hours < "10") {
-                                                hours = "0" + hours;
-                                            }
-                                            if (minutes < "10") {
-                                                minutes = "0" + minutes;
-                                            }
-                                            if (seconds < "10") {
-                                                seconds = "0" + seconds;
-                                            }
-                                            if (!nullTime()) {
-                                                days = hours = minutes = seconds = hoursB = minutesB = secondsB = 0;
-                                            }
-                                            if ($days) $days.text(days);
-                                            if ($daysText) $daysText.text(declOfNum(days, [daysText1, daysText2, daysText5]));
-                                            if ($hours) $hours.text(hours);
-                                            if ($hoursText) $hoursText.text(declOfNum(hoursB, [hoursText1, hoursText2, hoursText5]));
-                                            if ($minutes) $minutes.text(minutes);
-                                            if ($minutesText) $minutesText.text(declOfNum(minutesB, [minutesText1, minutesText2, minutesText5]));
-                                            if ($seconds) $seconds.text(seconds);
-                                            if ($secondsText) $secondsText.text(declOfNum(secondsB, [secondsText1, secondsText2, secondsText5]));
-                                            if (!rend) {
-                                                rend = true;
-                                                if ($days) $('.tn-elem__6040154501686693715553').css('display', 'table');
-                                                if ($daysText) $('.tn-elem__6040154501686693731372').css('display', 'table');
-                                                if ($hours) $('.tn-elem__6040154501686693724824').css('display', 'table');
-                                                if ($hoursText) $('.tn-elem__6040154501686693738569').css('display', 'table');
-                                                if ($minutes) $('.tn-elem__6040154501686693726477').css('display', 'table');
-                                                if ($minutesText) $('.tn-elem__6040154501686693743940').css('display', 'table');
-                                                if ($seconds) $('.tn-elem__6040154501686693728091').css('display', 'table');
-                                                if ($secondsText) $('.tn-elem__6040154501686693748934').css('display', 'table');
-                                            }
+                        
+                                    function updateTimer() {
+                                        let now = new Date(),
+                                            nowUTCPlus5 = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Almaty" })), // Current time in UTC+5
+                                            timeLeft = (targetDate - nowUTCPlus5) / 1000; // Time left in seconds
+                        
+                                        if (timeLeft <= 0) {
+                                            timeLeft = 0;
                                         }
-                                    } else {
-                                        if ($days) $days.text(0);
-                                        if ($hours) $hours.text(0);
-                                        if ($minutes) $minutes.text(0);
-                                        if ($seconds) $seconds.text(0);
-                                        if ($daysText) $daysText.text(declOfNum(0, [daysText1, daysText2, daysText5]));
-                                        if ($hoursText) $hoursText.text(declOfNum(0, [hoursText1, hoursText2, hoursText5]));
-                                        if ($minutesText) $minutesText.text(declOfNum(0, [minutesText1, minutesText2, minutesText5]));
-                                        if ($secondsText) $secondsText.text(declOfNum(0, [secondsText1, secondsText2, secondsText5]));
-                                        if ($days) $('.tn-elem__6040154501686693715553').css('display', 'table');
-                                        if ($daysText) $('.tn-elem__6040154501686693731372').css('display', 'table');
-                                        if ($hours) $('.tn-elem__6040154501686693724824').css('display', 'table');
-                                        if ($hoursText) $('.tn-elem__6040154501686693738569').css('display', 'table');
-                                        if ($minutes) $('.tn-elem__6040154501686693726477').css('display', 'table');
-                                        if ($minutesText) $('.tn-elem__6040154501686693743940').css('display', 'table');
-                                        if ($seconds) $('.tn-elem__6040154501686693728091').css('display', 'table');
-                                        if ($secondsText) $('.tn-elem__6040154501686693748934').css('display', 'table');
+                        
+                                        let days = Math.floor(timeLeft / 86400),
+                                            hours = Math.floor((timeLeft % 86400) / 3600),
+                                            minutes = Math.floor((timeLeft % 3600) / 60),
+                                            seconds = Math.floor(timeLeft % 60);
+                        
+                                        if ($days) $days.text(days < 10 ? '0' + days : days);
+                                        if ($daysText) $daysText.text(declOfNum(days, [daysText1, daysText2, daysText5]));
+                                        if ($hours) $hours.text(hours < 10 ? '0' + hours : hours);
+                                        if ($hoursText) $hoursText.text(declOfNum(hours, [hoursText1, hoursText2, hoursText5]));
+                                        if ($minutes) $minutes.text(minutes < 10 ? '0' + minutes : minutes);
+                                        if ($minutesText) $minutesText.text(declOfNum(minutes, [minutesText1, minutesText2, minutesText5]));
+                                        if ($seconds) $seconds.text(seconds < 10 ? '0' + seconds : seconds);
+                                        if ($secondsText) $secondsText.text(declOfNum(seconds, [secondsText1, secondsText2, secondsText5]));
+                        
+                                        if (timeLeft <= 0) {
+                                            clearInterval(timerInterval);
+                                        }
                                     }
-                                    window.dispatchEvent(new CustomEvent('resize'));
+                        
+                                    let timerInterval = setInterval(updateTimer, 1000);
+                                    updateTimer();
+                        
                                 }, 500);
                             });
                         </script>
+                        
+                        
 
 
                     </div>
