@@ -14,11 +14,13 @@
             margin: 0;
             text-align: center;
             transition: background-color 0.5s ease;
+            position: relative;
         }
 
         .button-container {
             display: flex;
             gap: 20px;
+            position: relative;
         }
 
         button {
@@ -55,6 +57,8 @@
 
         #zhokButton {
             position: absolute;
+            left: 100%;
+            top: 0;
         }
     </style>
 </head>
@@ -71,17 +75,15 @@
     const iyaButton = document.getElementById('iyaButton');
     const zhokuButton = document.getElementById('zhokButton');
 
+    // Initial placement of the "Жоқ" button
+    const container = document.querySelector('.button-container');
+    const iyaButtonRect = iyaButton.getBoundingClientRect();
+    zhokuButton.style.left = `${iyaButtonRect.left - 100}px`;  // Position "Жоқ" on the left of "Иә"
+    zhokuButton.style.top = `${iyaButtonRect.top}px`; // Align vertically
+
     iyaButton.addEventListener('click', () => {
         document.body.classList.add('disco');
     });
 
     zhokuButton.addEventListener('mouseover', () => {
-        // Randomly move the "Жоқ" button within the window
-        const randomX = Math.random() * (window.innerWidth - zhokuButton.offsetWidth);
-        const randomY = Math.random() * (window.innerHeight - zhokuButton.offsetHeight);
-        zhokuButton.style.left = randomX + 'px';
-        zhokuButton.style.top = randomY + 'px';
-    });
-</script>
-</body>
-</html>
+    // Randomly move the "Жоқ" button within the win
